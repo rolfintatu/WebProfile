@@ -2,10 +2,18 @@
 <div class="main">
 
   <section class="about_section">
-
+    <div class="icon_name">
+      <div class="icon_container">
+        <img src="../assets/logo.png" alt="florin_tatu_logo">
+      </div>
+      <div class="name_container">
+        <h1>Florin <span style="color: #D80000;">T</span>atu</h1>
+        <p>Web developer</p>
+      </div>
+    </div>
   </section>
 
-  <section [ngStyle]="{'width': windowWidth, 'z-index':'111', 'transition': '1s'}" class="work_section">
+  <section [ngStyle]="{'width': windowWidth, 'z-index':'111'}" class="work_section">
     <app-work (OnExtend)="extendWork($event)" ></app-work>
   </section>
 

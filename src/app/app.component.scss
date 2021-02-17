@@ -7,13 +7,58 @@
   margin: 0;
   position: relative;
   overflow: hidden;
+  color: white;
 
   .about_section{
     width: 100%;
     height: 100vh;
     background-color: #123;
     z-index: 10;
-    background-image: url('../assets/good_or_not.jpg');
+    //background-image: url('../assets/good_or_not.jpg');
+    background-color: #0E1428;
+    padding: 30px;
+
+    .icon_name{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+
+      .icon_container{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+
+      .name_container{
+
+        h1{
+          padding: 0 !important;
+          margin:0;
+        }
+
+        p{
+          padding: 0 !important;
+          margin:0;
+          color: #D80000;
+          text-decoration: underline;
+          font-size: 1.1rem;
+          margin-top: 10px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+      }
+    }
+
   }
 
   .work_section{
@@ -22,5 +67,26 @@
     z-index: 1;
     height: 100vh;
     right: 0;
+    transition: 1s;
   }
+}
+
+@media screen and (max-width: 768px) {
+
+  .main{
+    flex-direction: column;
+
+    .work_section{
+      left: 0;
+      top: calc(100vh - 50px);
+      width: 100% !important;
+      transition: 0s !important;
+
+      &:hover{
+        top: 0;
+      }
+    }
+
+  }
+
 }

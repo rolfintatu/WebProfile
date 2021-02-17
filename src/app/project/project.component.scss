@@ -9,3 +9,19 @@
     margin: 10px;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .projects_container{
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+
+    .project_view{
+      width: 50%;
+      height: 200px;
+    }
+  }
+
+}

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WorkComponent } from './work/work.component';
 import { ProjectComponent } from './project/project.component';
 import { TryeasyeatsComponent } from './tryeasyeats/tryeasyeats.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TryeasyeatsComponent } from './tryeasyeats/tryeasyeats.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
