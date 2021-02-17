@@ -1,0 +1,27 @@
+
+.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+
+  .about_section{
+    width: 100%;
+    height: 100vh;
+    background-color: #123;
+    z-index: 10;
+    background-image: url('../assets/good_or_not.jpg');
+  }
+
+  .work_section{
+    width: 20%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    height: 100vh;
+    right: 0;
+  }
+}

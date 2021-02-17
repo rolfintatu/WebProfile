@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myProfile';
+
+  public windowWidth: string = "20%";
+
+
+  public extendWork(isExtended: boolean){
+    if(isExtended)
+    {
+      this.windowWidth = "20%"
+    }else{
+      this.windowWidth = "100%"
+    }
+  }
 }
