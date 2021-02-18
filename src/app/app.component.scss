@@ -62,12 +62,10 @@
   }
 
   .work_section{
-    width: 20%;
     position: absolute;
-    z-index: 1;
+    z-index: 111;
     height: 100vh;
     right: 0;
-    transition: 1s;
   }
 }
 
@@ -80,7 +78,6 @@
       left: 0;
       top: calc(100vh - 50px);
       width: 100% !important;
-      transition: 0s !important;
 
       &:hover{
         top: 0;

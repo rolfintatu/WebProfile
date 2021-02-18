@@ -1,22 +1,16 @@
 import { Component } from '@angular/core';
+import { slide } from './animations/slideAnimation'
 
 @Component({
   selector: 'app-root',
+  animations: [ slide ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'myProfile';
-
-  public windowWidth: string = "20%";
-
+  public isExtended: boolean = true;
 
   public extendWork(isExtended: boolean){
-    if(isExtended)
-    {
-      this.windowWidth = "20%"
-    }else{
-      this.windowWidth = "100%"
-    }
+    this.isExtended = isExtended;
   }
 }
