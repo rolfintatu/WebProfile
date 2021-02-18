@@ -13,7 +13,8 @@ export const slide = trigger('slide', [
   state('slideIn',
     style({
       position: 'absolute',
-      width: '100%'
+      width: '100%',
+      top: '0'
     })
   ),
 

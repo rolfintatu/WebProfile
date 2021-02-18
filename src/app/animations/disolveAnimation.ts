@@ -11,11 +11,11 @@ import {
 export const disolve = trigger('openClose', [
 
     state('open',style({
-      // opacity: '1'
+      display: 'block'
     })),
 
     state('close', style({
-      // opacity: '0'
+      display: 'none'
     })),
 
     transition('open => close', [
