@@ -8,21 +8,21 @@ import {
   animation,
 } from '@angular/animations';
 
-export const disolve = trigger('openClose', [
+export const disolve = trigger('disolve', [
 
-    state('open',style({
+    state('show',style({
       display: 'block'
     })),
 
-    state('close', style({
+    state('hide', style({
       display: 'none'
     })),
 
-    transition('open => close', [
+    transition('show => hide', [
       animate('1s')
     ]),
 
-    transition('close => open', [
+    transition('hide => show', [
       animate('.5s'),
     ])
   ]);

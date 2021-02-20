@@ -14,8 +14,8 @@
     <div style="margin-top: 20px; font-size: 3rem;" >[ Work in progress.. ]</div>
   </section>
 
-  <section class="work_section"  [@slide]="isExtended ? 'slideOut' : 'slideIn'" >
-    <app-work (OnExtend)="extendWork($event)"  ></app-work>
+  <section class="work_section"  [@slide]="IsExtended ? 'slideIn' : 'slideOut'" >
+    <app-work [(IsExtended)]="IsExtended"></app-work>
   </section>
 
 </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, AfterViewInit, AfterViewChecked, Input, SimpleChange } from '@angular/core';
 import { faAngleDoubleLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { disolve } from '../animations/disolveAnimation';
 
@@ -8,30 +8,50 @@ import { disolve } from '../animations/disolveAnimation';
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss']
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent {
 
   constructor() { }
 
+  private _isExtended : boolean;
+  private _isDisolve : boolean;
+
   public faIcon = faAngleDoubleLeft;
-  public isExtended: boolean = false;
 
-  @Output() OnExtend: EventEmitter<boolean> = new EventEmitter();
-
-  public goTo()
+  @Input() set IsExtended(value: boolean)
   {
-    this.OnExtend.emit(this.isExtended);
+    this._isExtended = value;
 
-    this.isExtended = !this.isExtended;
-
-    if(this.isExtended)
+    if(value == true)
     {
       this.faIcon = faTimes;
-    }else{
-      this.faIcon = faAngleDoubleLeft;
     }
   }
 
-  ngOnInit(): void {
+  get IsDisolve() : boolean
+  {
+    return this._isDisolve;
   }
 
+  get IsExtended(){
+    return this._isExtended;
+  }
+
+
+  @Output() public IsExtendedChange : EventEmitter<boolean> = new EventEmitter();
+
+  public goTo()
+  {
+    this.IsExtendedChange.emit(this._isExtended);
+
+    this._isExtended = !this._isExtended;
+
+    if(this._isExtended)
+    {
+      this.faIcon = faTimes;
+      this._isDisolve = false;
+    }else{
+      this.faIcon = faAngleDoubleLeft;
+      this._isDisolve = true;
+    }
+  }
 }
