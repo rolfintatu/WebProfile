@@ -1,6 +1,23 @@
-<h1>My Projects</h1>
-
 <div class="projects_container">
-  <div class="project_view"> <a routerLink="/easyeats">Try It!</a> </div>
-  <div class="project_view"> </div>
+
+  <div *ngFor='let repo of repos' class="project_view">
+
+    <div class="project_name">
+      {{ repo.name }}
+    </div>
+
+    <div class="project_description">
+        {{repo.description}}
+    </div>
+
+    <div class="external_links">
+
+      <a href="{{ repo.html_url }}" target="blank" >
+        <img style="width: 25px; height: 25px;" src="../../assets/GitHub-Mark-64px.png" >
+      </a>
+
+    </div>
+
+    </div>
+
 </div>

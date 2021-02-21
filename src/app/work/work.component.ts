@@ -24,6 +24,10 @@ export class WorkComponent {
     if(value == true)
     {
       this.faIcon = faTimes;
+      this._isDisolve = false;
+    }
+    else{
+      this._isDisolve = true;
     }
   }
 

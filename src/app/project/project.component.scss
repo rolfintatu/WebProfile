@@ -1,12 +1,41 @@
 .projects_container{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,  minmax(300px, 300px));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  width: 100%;
+  height: auto;
+  justify-content: center;
 
   .project_view{
     width: 300px;
-    height: 300px;
+    height: auto;
     border: 1px solid red;
-    margin: 10px;
+
+    .project_name{
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 10px 0px;
+    }
+
+    .project_description{
+      width: 100%;
+      height: auto;
+      min-height: 70px;
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .external_links{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+    }
+
   }
 }
 
@@ -14,14 +43,16 @@
 @media screen and (max-width: 768px) {
 
   .projects_container{
+    display: flex;
     flex-direction: column;
     justify-content:  center;
-    align-items: center;
+    height: auto;
 
     .project_view{
-      width: 50%;
-      height: 200px;
+      width: 100%;
+      height: auto;
     }
+
   }
 
 }
