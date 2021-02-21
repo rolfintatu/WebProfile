@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   height: auto;
-  min-width: 1520px;
+  min-width: 800px;
   z-index: -1;
   width: 100%;
   color: #0E1428;
@@ -51,19 +51,20 @@
 
   .projects_section{
     width: calc(100% - 400px);
-    height: 100vh;
     padding: 50px;
     background-color: white;
+    overflow: auto;
+    height: 100vh;
   }
 }
 
 
 @media screen and (max-width: 768px) {
+
   .discover_section{
     flex-direction: column;
-    width: 100%;
-    min-width: auto;
-    overflow-x: scroll;
+    min-width: 100%;
+    background-color: white;
 
     .title_section{
       height: 200px;
@@ -75,8 +76,8 @@
 
     .projects_section{
       width: 100%;
-      padding: 0;
-      display: block !important;
+      padding: 10px;
+      height: calc(100vh - 200px);
     }
   }
 
