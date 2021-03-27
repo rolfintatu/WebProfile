@@ -24,7 +24,7 @@ export class GithubService {
 
    public GetMyRepos() : Observable<RepoModel[]>{
 
-    var result = this.httpClient.get<RepoModel[]>(`${ this.baseUrl }/users/rolfintatu/repos?type=owner`, { headers: this.httpHeaders })
+    var result = this.httpClient.get<RepoModel[]>(`${ this.baseUrl }/users/florintatu/repos?type=owner`, { headers: this.httpHeaders })
     .pipe(
     );
 
